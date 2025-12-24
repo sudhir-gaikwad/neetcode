@@ -1,8 +1,17 @@
+import java.util.Arrays;
+
 class BubbleSort {
-    public int[] sortArray(int[] nums) {
+
+    public static void main(String[] args) {
+        int input[] = {4, 5, 1, 8, 4};
+        int[] result = sortArray(input);
+        System.out.println(Arrays.toString(result));
+    }
+
+    public static int[] sortArray(int[] nums) {
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = 0; j < nums.length - i - 1; j++) {
-                if (nums[j] > nums[j] + 1) {
+                if (nums[j] > nums[j + 1]) {
                     int tmp = nums[j];
                     nums[j] = nums[j + 1];
                     nums[j + 1] = tmp;

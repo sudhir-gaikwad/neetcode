@@ -1,5 +1,14 @@
+import java.util.Arrays;
+
 class SelectionSort {
-    public int[] sortArray(int[] nums) {
+
+    public static void main(String[] args) {
+        int input[] = {4, 5, 1, 8, 4};
+        int[] result = sortArray(input);
+        System.out.println(Arrays.toString(result));
+    }
+
+    public static int[] sortArray(int[] nums) {
         for (int i = 0; i < nums.length - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < nums.length; j++) {

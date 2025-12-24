@@ -1,13 +1,22 @@
+import java.util.Arrays;
+
 class InsertionSort {
-    public int[] sortArray(int[] nums) {
+
+    public static void main(String[] args) {
+        int input[] = {4, 5, 1, 8, 4};
+        int[] result = sortArray(input);
+        System.out.println(Arrays.toString(result));
+    }
+
+    public static int[] sortArray(int[] nums) {
         for (int i = 1; i < nums.length; i++) {
             int tmp = nums[i];
             int j = i - 1;
-            while (j >= 0 && tmp < nums[j]) {
+            while (j >= 0 && nums[j] > tmp) {
                 nums[j + 1] = nums[j];
-                nums[j] = tmp;
                 j--;
             }
+            nums[j + 1] = tmp;
         }
         return nums;
     }
